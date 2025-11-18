@@ -1,0 +1,49 @@
+:root{
+  --bg:#0f1724;
+  --panel:#0b1220;
+  --accent:#7dd3fc;
+  --btn:#1f2937;
+  --btn-accent:#334155;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;
+  background:linear-gradient(180deg,#071029 0%, #0b1220 100%);
+  display:flex;
+  min-height:100vh;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+}
+.calculator{
+  width:360px;
+  background:linear-gradient(180deg,var(--panel),#071220);
+  border-radius:12px;
+  padding:18px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+}
+.screen{background:rgba(255,255,255,0.03);border-radius:8px;padding:12px;margin-bottom:12px}
+.display{
+  font-size:28px;
+  text-align:right;
+  padding:6px 8px;
+  min-height:44px;
+  color:var(--text);
+  word-break:break-all;
+}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.btn{
+  background:var(--btn);
+  border:0;border-radius:8px;padding:14px 10px;color:var(--text);font-size:18px;cursor:pointer;
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,0.2);
+}
+.btn:active{transform:translateY(1px);}
+.btn.op{background:linear-gradient(180deg,var(--btn-accent),#222a35);font-weight:600}
+.btn.eq{background:linear-gradient(180deg,var(--accent),#38bdf8);color:#042231;font-weight:700}
+.btn.func{background:#7c98aa;color:#042231}
+.btn.wide{grid-column:span 2}
+.meta{margin-top:12px;font-size:13px;opacity:0.8;text-align:center}
+
+@media (max-width:420px){.calculator{width:94vw}}
