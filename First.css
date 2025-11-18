@@ -1,0 +1,61 @@
+/* ===== RESET + BASE ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Tahoma", sans-serif;
+    background: black;
+    color: yellow;
+}
+
+/* ===== STARFIELD ===== */
+.stars {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    animation: starAnim linear infinite;
+}
+
+@keyframes starAnim {
+    from { transform: translateY(0); opacity: 1; }
+    to   { transform: translateY(100vh); opacity: 0; }
+}
+
+.crawl-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 400px;
+    z-index: 2;
+}
+
+
+.crawl {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%) rotateX(25deg);
+    font-size: 32px;
+    line-height: 1.6;
+    text-align: center;
+    animation: crawl 30s linear infinite;
+}
+
+#starfield {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+@keyframes crawl {
+    from { bottom: -100px; }
+    to   { bottom: 2000px; }
+}

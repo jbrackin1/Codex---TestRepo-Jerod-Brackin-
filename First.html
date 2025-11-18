@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Effect</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="First.css" />
+</head>
+
+<body>
+
+    <!-- Starfield Background -->
+    <div id="starfield"></div>
+
+    <!-- Star Wars Intro Crawl -->
+    <div class="crawl-container">
+        <div class="crawl">
+            <p>Hey I'm Jerod...</p>
+            <p>Thanks for having me!</p>
+            <p>And</p>
+            <p>Welcome to My Page</p>
+            <p>I am excited to share my journey with you!</p>
+        </div>
+    </div>
+
+    <script>
+        // Create starfield effect
+        const starfield = document.getElementById("starfield");
+
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement("div");
+            star.className = "stars";
+            star.style.top = Math.random() * 100 + "vh";
+            star.style.left = Math.random() * 100 + "vw";
+            star.style.animationDuration = 2 + Math.random() * 4 + "s";
+            starfield.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
